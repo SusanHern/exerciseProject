@@ -92,7 +92,7 @@ if (mysqli_num_rows($res) > 0) {
  
   include "pagx.php";
   
-  
+    //change 10 to $var to make this dynamic according to selected record set
        $stmt = "SELECT * FROM users ORDER BY email DESC LIMIT $nu, 10";
        $result = mysqli_query($conn, $stmt);
 if (mysqli_num_rows($result) > 0) {

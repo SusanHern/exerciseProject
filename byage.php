@@ -70,7 +70,7 @@
               <tbody>
               <?php
               error_reporting(0);
-              
+  //change 10 to $var to make this dynamic according to selected record set              
 
 include "config.php";
 

@@ -21,7 +21,7 @@ margin:3px;}
 </style><?
 error_reporting(0);
 
-//$totalresults totalrecords
+//$totalresults pages
 //pagenumber we are on = ceil($totalresultset/$numofrecords from $_GET);
 //next and previous
 function nextandprevious($totalresults, $numpages, $numrecordsperpage, $pagename, $type, $searchTerm) { 

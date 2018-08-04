@@ -70,7 +70,7 @@ if (mysqli_num_rows($res) > 0) {
             $records = $ro["COUNT(*)"];
             
   }} 
-
+  //change 10 to $var to make this dynamic according to selected record set
  require "paging.php";
  
   include "pagx.php";
