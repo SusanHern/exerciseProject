@@ -7,11 +7,7 @@
   <title>User Tables</title>
   <!-- Bootstrap core CSS-->
   <link href="bootstrap.min.css" rel="stylesheet">
-  <!-- Custom fonts for this template-->
-  <link href="font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- Page level plugin CSS-->
-  <link href="dataTables.bootstrap4.css" rel="stylesheet">
-  <!-- Custom styles for this template-->
+  
   <link href="narrow.css" rel="stylesheet">
 </head><body>
 <div class="container">

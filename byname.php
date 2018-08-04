@@ -7,10 +7,7 @@
   <title>User Tables</title>
   <!-- Bootstrap core CSS-->
   <link href="bootstrap.min.css" rel="stylesheet">
-  <!-- Custom fonts for this template-->
-  <link href="font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- Page level plugin CSS-->
-  <link href="dataTables.bootstrap4.css" rel="stylesheet">
+  
   <!-- Custom styles for this template-->
   <link href="narrow.css" rel="stylesheet">
 </head><body><div class="container">
@@ -91,8 +88,8 @@ if (mysqli_num_rows($res) > 0) {
  
   include "pagx.php";
   
-  
-       $stmt = "SELECT * FROM users ORDER BY surname DESC LIMIT $nu, 10";
+  //change 10 to $var to make this dynamic according to selected record set
+         $stmt = "SELECT * FROM users ORDER BY surname DESC LIMIT $nu, 10";
        $result = mysqli_query($conn, $stmt);
 if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)) { 
