@@ -2,7 +2,7 @@
 <?php
 error_reporting(0);
 $rescount = $records;
-$recordsperpage = 20;
+$recordsperpage = 10;
 $pages = ceil($rescount/$recordsperpage);
 
 if(!($_GET["nu"])) {  
