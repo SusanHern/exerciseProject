@@ -39,6 +39,7 @@ $input_form = "<div class='form-group row'><div class='". $size . "'><div class=
       </div><h4>Enter a search term and click one of the blue buttons to initiate search filter.</h4><p>Eg:083 then click Mobile</p><form id='xx' name='xx'>
  <?
  error_reporting(0);
+ $recordsperpage = 20;
  $idf = "searchTerm";
  $idt = "search";
  $idl = "Search";

@@ -11,23 +11,23 @@ include "config.php";
 $nu = $_GET[nu];
 $searchTerm = $_REQUEST["searchTerm"];
 $type = $_REQUEST["type"];
-
+$recordsperpage = 20;
 if($type === 'Name') { 
-$stm = "SELECT * FROM users WHERE name LIKE '%$searchTerm%' LIMIT $nu, 10"; 
+$stm = "SELECT * FROM users WHERE name LIKE '%$searchTerm%' LIMIT $nu, $recordsperpage"; 
 $stmx = "SELECT COUNT(*) FROM users WHERE name LIKE '%$searchTerm%'"; }
 elseif($type === 'Surname') { 
 
-$stm = "SELECT * FROM users WHERE surname LIKE '%$searchTerm%' LIMIT $nu, 10";
+$stm = "SELECT * FROM users WHERE surname LIKE '%$searchTerm%' LIMIT $nu, $recordsperpage";
 $stmx = "SELECT COUNT(*) FROM users WHERE surname LIKE '%$searchTerm%'"; } 
 elseif($type === 'BirthDate') { 
-$stm = "SELECT * FROM users WHERE birthdate LIKE '%$searchTerm%' LIMIT $nu, 10";
+$stm = "SELECT * FROM users WHERE birthdate LIKE '%$searchTerm%' LIMIT $nu, $recordsperpage";
 $stmx = "SELECT COUNT(*) FROM users WHERE birthdate LIKE '%$searchTerm%'"; }
 elseif($type === 'Mobile') { 
 $searchTerm = 0;
-$stm = "SELECT * FROM users WHERE mobile LIKE '$searchTerm%' LIMIT $nu, 10";
+$stm = "SELECT * FROM users WHERE mobile LIKE '$searchTerm%' LIMIT $nu, $recordsperpage";
  $stmx = "SELECT COUNT(*) FROM users WHERE mobile LIKE '%$searchTerm%'";}
 elseif($type === 'Email') { 
-$stm = "SELECT * FROM users WHERE email LIKE '%$searchTerm%' LIMIT $nu, 10";
+$stm = "SELECT * FROM users WHERE email LIKE '%$searchTerm%' LIMIT $nu, $recordsperpage";
 $stmx = "SELECT COUNT(*) FROM users WHERE email LIKE '%$searchTerm%'"; } else {
 echo "We dont have that type";
 } 
