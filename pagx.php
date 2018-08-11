@@ -2,7 +2,7 @@
 <?php
 error_reporting(0);
 $rescount = $records;
-$recordsperpage = 10;
+$recordsperpage = 6;
 $pages = ceil($rescount/$recordsperpage);
 
 if(!($_GET["nu"])) {  
@@ -46,7 +46,7 @@ echo "<div class='pr'><a href='" . $url . "?nu=" . ($nu-$recordsperpage) . "&&ty
 
 
 
-elseif($nu === 0 && $rec > 1 ) { 
+elseif($nu === 0 && $rec >= 1 ) { 
 
 $pgd = ceil($nu/$recordsperpage)+1;
 nextonly($pages, $pgd, $recordsperpage, $url, $type, $searchTerm);
